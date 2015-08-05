@@ -1,0 +1,427 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Deployment Process &mdash; Supply Chain 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Supply Chain 0.1 documentation" href="index.html"/>
+        <link rel="next" title="Project structure" href="Structure.html"/>
+        <link rel="prev" title="Software Environment Tools and Components" href="Software.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Supply Chain
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Overview.html#facility-types">Facility types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Overview.html#the-reporting-hierachy">The reporting hierachy</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Software.html">Software Environment Tools and Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#msql-database">MSQL database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#php-and-apache2-for-the-server-side">PHP and Apache2 for the server side</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#javascript-ajax-jquery-php-curl-for-dhis2-web-api-querying">JavaScript, AJAX, jQuery,PHP CURL for DHIS2 Web API querying</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#html5-bootstrap-font-awesome-javascript-jquery-for-user-interface">HTML5, Bootstrap, Font-Awesome, JavaScript, jQuery for user interface</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Deployment Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-install-git">How to install Git:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-install-lamp">How to install LAMP:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-install-php-curl">How to install PHP-Curl:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-use-crontab">How to use crontab:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#setup-and-configuration">Setup and Configuration</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Structure.html">Project structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#api">api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#assets">Assets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#client">Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#db">db</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#system">System</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Userguide.html">User guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#getting-started">Getting started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#system-requirements">System requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#logging-in">Logging in</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#permissions">Permissions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#login-roles">Login roles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#launching-the-web-application">Launching the web application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#application-layout">Application layout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#header">Header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#side-bar">Side bar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#users">Users</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#programs">Programs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#classify">Classify</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#updates">Updates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#administration">Administration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#reports">Reports</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#tasks">Tasks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#assigning-a-dataset-to-organization-units">Assigning a dataset to organization units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#accessing-the-data-entry-form">Accessing the data entry form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#entering-data-for-satellite-sites">Entering data for satellite sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#collection-of-aggregated-data-for-the-satellite-sites">Collection of aggregated data for the satellite sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#update-of-central-site-data">Update of central site data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#sites-analytics">Sites Analytics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#getting-art-reports">Getting ART Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#other-procedures">Other procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#get-reports">Get reports</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#generating-a-supply-hierarchy-report">Generating a supply hierarchy report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#generating-a-program-report">Generating a program report</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#trouble-shooting">Trouble shooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#restore-of-deleted-data">Restore of deleted data</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Database schema.html">Database Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Database schema.html#database-tables">Database Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Database schema.html#tables-attributes-and-design">Tables&#8217; Attributes and Design</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#central-sites">central_sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#counties">Counties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#datasets">Datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#deletion-logs">Deletion_logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#dhis-datasets">Dhis_datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#facilities">Facilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#facility-program-mapping">Facility_program_mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#login">Login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#programs">Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#satellite-site">Satellite_site</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#standalone-site">Standalone_site</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#sub-counties">Sub_counties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#sub-county-stores">Sub_county_stores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#top-level">Top_level</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#users">Users</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Supply Chain</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Deployment Process</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Deployment.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="deployment-process">
+<h1>Deployment Process<a class="headerlink" href="#deployment-process" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Linux-Ubuntu server is the preferred development and deployment environment for this application.</p>
+<p>The Dependencies-Development and Production environment required are:</p>
+<ol class="arabic simple">
+<li>Git- This is a distributed revision control system.</li>
+<li>MySQL  database(&gt;5.5), apache server and php(&gt;=5.3)-LAMP.</li>
+<li>php-curl.</li>
+<li>crontab.</li>
+</ol>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Install all the depencies i.e the ones listed above in your machine.</li>
+</ol>
+<div class="section" id="how-to-install-git">
+<h3>How to install Git:<a class="headerlink" href="#how-to-install-git" title="Permalink to this headline">¶</a></h3>
+<p>If you are using ubuntu, just type the following commands in the ubuntu terminal;</p>
+<blockquote>
+<div><p><strong>sudo apt-get update</strong></p>
+<p><strong>sudo apt-get install git</strong></p>
+</div></blockquote>
+<p>Now that you have git installed, you need to do a few things so that the commit messages that will be generated for you will contain your correct information.</p>
+<p>The easiest way of doing this is through the git config command. Specifically, we need to provide our name and email address because git embeds this information into each commit we do. We can go ahead and add this information by typing:</p>
+<blockquote>
+<div><p><strong>git config &#8211;global user.name &#8220;Your Name&#8221;</strong></p>
+<p><strong>git config &#8211;global user.email &#8220;youremail&#64;domain.com&#8221;</strong></p>
+</div></blockquote>
+<p>To learn more about git, you can follow the link <a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-use-git-effectively">how to use git effectively</a></p>
+<p>If you are using windows, You&#8217;ll need to download and install <a class="reference external" href="http://msysgit.github.io/">Git for Windows</a>. If you&#8217;re unsure of which one to choose, just go with the full installer. After downloading, run the installer.</p>
+</div>
+<div class="section" id="how-to-install-lamp">
+<h3>How to install LAMP:<a class="headerlink" href="#how-to-install-lamp" title="Permalink to this headline">¶</a></h3>
+<p>LAMP stack is a group of open source software used to get web servers up and running. The acronym stands for Linux, Apache, MySQL, and PHP.</p>
+<p>First, you need to install Apache.</p>
+<blockquote>
+<div><p><strong>sudo apt-get update</strong></p>
+<p><strong>sudo apt-get install apache2</strong></p>
+</div></blockquote>
+<p>That’s it. To check if Apache is installed, direct your browser to your server’s IP address (eg. <a class="reference external" href="http://12.34.56.789">http://12.34.56.789</a>). The page should display the words “It works!&#8221;</p>
+<p>Secondly, install MYSQL bt typing the following commands,</p>
+<blockquote>
+<div><strong>sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql</strong></div></blockquote>
+<p>Once you have installed MySQL, we should activate it with this command:</p>
+<blockquote>
+<div><strong>sudo mysql_install_db</strong></div></blockquote>
+<p>Finish up by running the MySQL set up script:</p>
+<blockquote>
+<div><strong>sudo /usr/bin/mysql_secure_installation</strong></div></blockquote>
+<p>The prompt will ask you for your current root password.</p>
+<blockquote>
+<div><p><strong>Enter current password for root (enter for none):</strong></p>
+<p><strong>OK, successfully used password, moving on...</strong></p>
+</div></blockquote>
+<p>Thirdly, you need to install PHP.</p>
+<p>Type this command on the terminal;</p>
+<blockquote>
+<div><strong>sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt</strong></div></blockquote>
+</div>
+<div class="section" id="how-to-install-php-curl">
+<h3>How to install PHP-Curl:<a class="headerlink" href="#how-to-install-php-curl" title="Permalink to this headline">¶</a></h3>
+<p>Simply type the following command from the terminal</p>
+<blockquote>
+<div><strong>sudo apt-get install php5-curl</strong></div></blockquote>
+</div>
+<div class="section" id="how-to-use-crontab">
+<h3>How to use crontab:<a class="headerlink" href="#how-to-use-crontab" title="Permalink to this headline">¶</a></h3>
+<p>A crontab is a simple text file with a list of commands meant to be run at specified times. It is edited with a command-line utility. These commands (and their run times) are then controlled by the cron daemon, which executes them in the system background.</p>
+<p>To access crontab, type in the following command,</p>
+<blockquote>
+<div><strong>crontab -e</strong></div></blockquote>
+<p>If you need to run commands with administrative privileges,</p>
+<blockquote>
+<div><strong>sudo crontab -e</strong></div></blockquote>
+<p>To list crontab content,</p>
+<blockquote>
+<div><strong>crontab -l</strong></div></blockquote>
+<ol class="arabic simple" start="2">
+<li>Clone the application from the github repository to your document root in your machine/Or Copy the application folder into your document root.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please note that you must have an account on Github in order to do this.</p>
+</div>
+</div>
+</div>
+<div class="section" id="setup-and-configuration">
+<h2>Setup and Configuration<a class="headerlink" href="#setup-and-configuration" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Create a mysql database from your localhost and dump the database schema  into it.( Database Schema is in  the application’s root folder).</li>
+<li>In the <em>config.php</em> file (application_name/system) change the configurations for:</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>MySQL Database name.</li>
+<li>MySQL user and the MySQL password.</li>
+<li>Base path for your application.</li>
+<li>DHIS2 url</li>
+<li>DHIS2 access username and password for api interaction.</li>
+</ul>
+</div></blockquote>
+<div class="figure">
+<img alt="_images/config.png" src="_images/config.png" />
+</div>
+<ol class="arabic simple" start="3">
+<li>Setup a cronjob to download data elements from DHIS2.(Executes hourly).</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>api/download_dataElements.php</li>
+</ul>
+</div></blockquote>
+<div class="figure">
+<img alt="_images/cron.png" src="_images/cron.png" />
+</div>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Structure.html" class="btn btn-neutral float-right" title="Project structure" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Software.html" class="btn btn-neutral" title="Software Environment Tools and Components" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, sci devs.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

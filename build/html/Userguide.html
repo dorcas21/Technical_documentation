@@ -1,0 +1,699 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>User guide &mdash; Supply Chain 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Supply Chain 0.1 documentation" href="index.html"/>
+        <link rel="next" title="Database Schema" href="Database schema.html"/>
+        <link rel="prev" title="Project structure" href="Structure.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Supply Chain
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Overview.html#facility-types">Facility types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Overview.html#the-reporting-hierachy">The reporting hierachy</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Software.html">Software Environment Tools and Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#msql-database">MSQL database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#php-and-apache2-for-the-server-side">PHP and Apache2 for the server side</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#javascript-ajax-jquery-php-curl-for-dhis2-web-api-querying">JavaScript, AJAX, jQuery,PHP CURL for DHIS2 Web API querying</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#html5-bootstrap-font-awesome-javascript-jquery-for-user-interface">HTML5, Bootstrap, Font-Awesome, JavaScript, jQuery for user interface</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Deployment.html">Deployment Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Deployment.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Deployment.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Deployment.html#setup-and-configuration">Setup and Configuration</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Structure.html">Project structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#api">api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#assets">Assets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#client">Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#db">db</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#system">System</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">User guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#system-requirements">System requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#logging-in">Logging in</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#permissions">Permissions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#login-roles">Login roles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#launching-the-web-application">Launching the web application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#application-layout">Application layout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#header">Header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#side-bar">Side bar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#users">Users</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#programs">Programs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#classify">Classify</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#updates">Updates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#administration">Administration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reports">Reports</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tasks">Tasks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#assigning-a-dataset-to-organization-units">Assigning a dataset to organization units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-the-data-entry-form">Accessing the data entry form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#entering-data-for-satellite-sites">Entering data for satellite sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#collection-of-aggregated-data-for-the-satellite-sites">Collection of aggregated data for the satellite sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#update-of-central-site-data">Update of central site data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sites-analytics">Sites Analytics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getting-art-reports">Getting ART Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#other-procedures">Other procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#get-reports">Get reports</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#generating-a-supply-hierarchy-report">Generating a supply hierarchy report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generating-a-program-report">Generating a program report</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#trouble-shooting">Trouble shooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#restore-of-deleted-data">Restore of deleted data</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Database schema.html">Database Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Database schema.html#database-tables">Database Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Database schema.html#tables-attributes-and-design">Tables&#8217; Attributes and Design</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#central-sites">central_sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#counties">Counties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#datasets">Datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#deletion-logs">Deletion_logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#dhis-datasets">Dhis_datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#facilities">Facilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#facility-program-mapping">Facility_program_mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#login">Login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#programs">Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#satellite-site">Satellite_site</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#standalone-site">Standalone_site</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#sub-counties">Sub_counties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#sub-county-stores">Sub_county_stores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#top-level">Top_level</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#users">Users</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Supply Chain</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>User guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Userguide.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="user-guide">
+<h1>User guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Managing supply chains in support of HIV/AIDS services is a formidable challenge, especially in developing countries. Expanding programs for HIV/AIDS, TB and malaria require strong and supportive laboratory services that depend on the availability of the required commodities to perform critical tests, with most tests requiring multiple commodities to be available simultaneously. A correctly designed and run distribution system should keep the commodities in good condition, rationalize storage points, use transport as efficiently as possible, reduce theft and fraud and provide information for forecasting needs. This requires a good management of the system along with a simple but well-designed information system in place.
+The purpose of this project is to establish an hierarchy of the drugs supply chain that is not captured in DHIS2 for purposes of analysis and report generation.</p>
+<p>As things stand, the Kenya instance of <a class="reference external" href="http://test.hiskenya.org/dhis-web-commons/security/login.action;jsessionid=720CD1B3E45168E4E27916FA020C6887">DHIS2</a> only establishes a hierarchy based on the country&#8217;s administrative units (national, county, sub-county, facility), which while important, does not capture the supply chain hierarchy for ART-related medicines &amp; nutrition commodities.</p>
+<p>This supply hierarchy needs to place facilities in their correct order matching the flow of both data/information and health commodities; hence clearly showing the reporting chain i.e. what facilities report to which others, and what facilities report to the national/central  level (NASCOP), hence instituting a parent-child relationship.</p>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>The purpose of this project is to establish the current hierarchy of the ART-related medicines and Nutrition &amp; HIV commodities supply chain, which is not captured in DHIS2, for purposes of analysis and report generation.</p>
+<div class="section" id="system-requirements">
+<h3>System requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h3>
+<p>Chrome browser is recommended for the application. This is because of the javascript that is used in the app.
+Its able to load faster in chrome.</p>
+<p>Login roles to DHIS2 are also required inorder to access the application.</p>
+<div class="section" id="logging-in">
+<h4>Logging in<a class="headerlink" href="#logging-in" title="Permalink to this headline">¶</a></h4>
+<p>You have to login to <a class="reference external" href="http://test.hiskenya.org/dhis-web-commons/security/login.action;jsessionid=720CD1B3E45168E4E27916FA020C6887">DHIS2</a> first:</p>
+<div class="figure">
+<img alt="_images/dhis2.png" src="_images/dhis2.png" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please note that you must have signed up in DHIS2.</p>
+</div>
+<p>Secondly, you must login to the application itself. Here is the login page:</p>
+<div class="figure">
+<img alt="_images/homepage.png" src="_images/homepage.png" />
+</div>
+<p>A successful login will lead you to using the application.</p>
+</div>
+</div>
+<div class="section" id="permissions">
+<h3>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="login-roles">
+<h4>Login roles<a class="headerlink" href="#login-roles" title="Permalink to this headline">¶</a></h4>
+<p>There are various user roles according to the user who is logged in:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Users who can read data only i.e generating and viewing reports. They dont have permissions to edit anything in the application.</p>
+</li>
+<li><p class="first">Users who can do both read and write. These users have the permission to generate reports and also post back to <a class="reference external" href="http://test.hiskenya.org/dhis-web-commons/security/login.action;jsessionid=720CD1B3E45168E4E27916FA020C6887">DHIS2</a>.</p>
+</li>
+<li><p class="first">The Admin who has all the permissions in the application. These include:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Creation and management of programmes.</li>
+<li>Creation and management of users.</li>
+<li>Updating of basically everything in the application.</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+</div>
+<div class="section" id="launching-the-web-application">
+<h2>Launching the web application<a class="headerlink" href="#launching-the-web-application" title="Permalink to this headline">¶</a></h2>
+<p>This application is launched as a stand alone app, because it is not incorporated in DHIS2.</p>
+<p>However, it pulls data from DHIS2.</p>
+<p>In order to launch the app, you need to type the <a class="reference external" href="http://bangah.me/">url</a></p>
+<p>This will direct you to the login page where you can login.</p>
+</div>
+<div class="section" id="application-layout">
+<h2>Application layout<a class="headerlink" href="#application-layout" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="header">
+<h3>Header<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h3>
+<p>The header of the application can be seen on the login page as &#8216;Supply Pipeline Hierarchy Tool&#8217;.</p>
+<p>Below the header is a short welcome message &#8220;Welcome to the Kenya Health Information Systems&#8221; and a Logo.</p>
+</div>
+<div class="section" id="side-bar">
+<h3>Side bar<a class="headerlink" href="#side-bar" title="Permalink to this headline">¶</a></h3>
+<p>At the leftside bar, there is a list of links.</p>
+<p>These links appear differently according to the user who is logged in.</p>
+<p>The Admin can view:</p>
+<div class="section" id="users">
+<h4>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h4>
+<p>Here, the admin can create and manage different types of users.</p>
+<ul class="simple">
+<li>Go to the users tab at the leftside bar of the app.</li>
+<li>Click on &#8216;create&#8217; to create a new user. Fill in details in the form that appears on the page and save.</li>
+</ul>
+<div class="figure">
+<img alt="_images/users.png" src="_images/users.png" />
+</div>
+<ul class="simple">
+<li>You can also add a new user from DHIS2 by clicking on &#8216;add form DHIS2&#8217; in the dropdown list.</li>
+<li>To edit the roles of a user, click on the &#8216;edit&#8217; in the dropdown. In the window that appears, click on edit at the each user in order to edit.</li>
+</ul>
+<div class="figure">
+<img alt="_images/edit.png" src="_images/edit.png" />
+</div>
+<ul class="simple">
+<li>You can also click on the &#8216;administration&#8217; to deactivate an account or update the details of a user.</li>
+</ul>
+<div class="figure">
+<img alt="_images/admini.png" src="_images/admini.png" />
+</div>
+</div>
+<div class="section" id="programs">
+<h4>Programs<a class="headerlink" href="#programs" title="Permalink to this headline">¶</a></h4>
+<p>Here, you can create and manage programs.</p>
+<ol class="arabic simple">
+<li>Click on the programs tab on the leftside bar, on the dropdown that appears, click on the &#8216;create&#8217; to create a new program.</li>
+<li>On the window that appears, fill in the details of the program you want to create i.e the program name and the datasets for the program.</li>
+</ol>
+<div class="figure">
+<img alt="_images/create.png" src="_images/create.png" />
+</div>
+<p>You can also click on the &#8216;edit&#8217; in the dropdown to change the details of a program or &#8216;administration&#8217; to delete a certain program.</p>
+</div>
+<div class="section" id="classify">
+<h4>Classify<a class="headerlink" href="#classify" title="Permalink to this headline">¶</a></h4>
+<p>Here you can classify facilities according to the hierarchy, either as sub-county stores, central stores, satellite sites or stand alone sites.</p>
+<ol class="arabic simple">
+<li>Click on the classify tab on the leftside bar, on the dropdown that appears, select either sub-county stores,central sites, satellite sites or stand alones.</li>
+<li>Once you click &#8216;sub-county stores&#8217;, a new window will be loaded containing a form where you will;<ul>
+<li>Select the program you want to classify and submit.</li>
+<li>Select the sub-county stores that the program will be attributed to and submit.</li>
+</ul>
+</li>
+</ol>
+<div class="figure">
+<img alt="_images/subcounty.png" src="_images/subcounty.png" />
+</div>
+<ol class="arabic simple" start="3">
+<li>When you select the &#8216;central site&#8217; from the dropdown;<ul>
+<li>select the program you want to classify and submit.</li>
+<li>Below that, select the central store you want the program to be attributed to and then submit.</li>
+</ul>
+</li>
+</ol>
+<div class="figure">
+<img alt="_images/central.png" src="_images/central.png" />
+</div>
+<ol class="arabic simple" start="4">
+<li>When you select the &#8216;satellite site&#8217; from the dropdown;<ul>
+<li>Here, you can either classify the satellite as a sub-county store satellite or a central site satellite. Just click on any of the links according to the classification you want.</li>
+</ul>
+</li>
+</ol>
+<p>For example, if you select the sub-county store satellite link,</p>
+<blockquote>
+<div><blockquote>
+<div><ul class="simple">
+<li>Select the program you want to classify and click submit.</li>
+<li>Below it, select the sub-county store (the parent to the satellite site) and submit.</li>
+<li>Below that, select the satellite sites that will have the sub-county store selected above as their parent and then submit.</li>
+</ul>
+</div></blockquote>
+<div class="figure">
+<img alt="_images/satellites.png" src="_images/satellites.png" />
+</div>
+</div></blockquote>
+<p>The same procedure applies when you select the central site satellite link.</p>
+<p>In the dropdown, when you click on  &#8216;Stand Alones&#8217;, you will just follow the same procedure for classification.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This establishes a hierarchy of the supply chain for report generation.</p>
+</div>
+</div>
+<div class="section" id="updates">
+<h4>Updates<a class="headerlink" href="#updates" title="Permalink to this headline">¶</a></h4>
+<p>There is need to query DHIS2 for newly updated organization units, facilities and datasets.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>click on the &#8216;updates&#8217; link in the leftside bar of the application.</li>
+<li>From the dropdown that appears below the link, select either counties,sub-counties, facilities or datasets inorder to update them respectively.</li>
+</ol>
+</div></blockquote>
+<div class="figure">
+<img alt="_images/update.png" src="_images/update.png" />
+</div>
+</div>
+<div class="section" id="administration">
+<h4>Administration<a class="headerlink" href="#administration" title="Permalink to this headline">¶</a></h4>
+<p>Here, the admin can delete a supply hierarchy from the system.</p>
+<p>He/She can also restore deleted data since its not deleted permanently.</p>
+</div>
+<div class="section" id="reports">
+<h4>Reports<a class="headerlink" href="#reports" title="Permalink to this headline">¶</a></h4>
+<p>This link is used to query for various reports including program reports, supply hierarchy reports and dataset reports</p>
+<p>Here is a screenshot of the application layout as viewed by the admin:</p>
+<div class="figure">
+<img alt="_images/app.png" src="_images/app.png" />
+</div>
+<p>The user with the role &#8216;Read&#8217; can only view the reports link on the leftside bar.</p>
+<p>Here is the app layout as viewed by the &#8216;Read&#8217; user:</p>
+<div class="figure">
+<img alt="_images/read.png" src="_images/read.png" />
+</div>
+<p>The user with the Write access view the Reports link on the leftside bar and can also post back to DHIS2.</p>
+<p>Here is the app layout as viewed by the &#8216;Write&#8217; user:</p>
+<div class="figure">
+<img alt="_images/write.png" src="_images/write.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tasks">
+<h2>Tasks<a class="headerlink" href="#tasks" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="assigning-a-dataset-to-organization-units">
+<h3>Assigning a dataset to organization units<a class="headerlink" href="#assigning-a-dataset-to-organization-units" title="Permalink to this headline">¶</a></h3>
+<p>This is done in the <a class="reference external" href="http://test.hiskenya.org/dhis-web-commons/security/login.action;jsessionid=720CD1B3E45168E4E27916FA020C6887">DHIS2</a> test site.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">In <a class="reference external" href="http://test.hiskenya.org/dhis-web-commons/security/login.action;jsessionid=720CD1B3E45168E4E27916FA020C6887">DHIS2</a> apps, select the data sets app.</p>
+</li>
+<li><p class="first">Type the name of the dataset you want to assign at the top and click on the filter button.</p>
+</li>
+<li><p class="first">The dataset will be filtered and displayed on the screen.</p>
+<p>Click on it, you will see a drop down appear.</p>
+</li>
+<li><p class="first">Select the first option, (assign to organisation units).</p>
+</li>
+</ol>
+<div class="figure">
+<img alt="_images/dataset.png" src="_images/dataset.png" />
+</div>
+<ol class="arabic simple" start="5">
+<li>Select the org units you want to assign the dataset to and then click on the save button at the bottom of the page.</li>
+</ol>
+</div></blockquote>
+<div class="figure">
+<img alt="_images/assign.png" src="_images/assign.png" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please note that you must be logged into <a class="reference external" href="http://test.hiskenya.org/dhis-web-commons/security/login.action;jsessionid=720CD1B3E45168E4E27916FA020C6887">DHIS2</a></p>
+</div>
+</div>
+<div class="section" id="accessing-the-data-entry-form">
+<h3>Accessing the data entry form<a class="headerlink" href="#accessing-the-data-entry-form" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li>To access the data entry window, click on the apps tab at the top bar. A drop down will appear listing all the apps in DHIS2.</li>
+<li>Select the Data Entry option.</li>
+<li>Locate the organisation unit you want to register data for in the tree menu to the left. Expand and close the branches by clicking on the +/- symbols. You can also search for the orgunit at the green symbol above the tree, but you need to type the full name inorder to match the orgunit.</li>
+<li>Select a dataset from the drop down list of datasets which are available for the orgunit which you have selected.</li>
+<li>Select the period you want to register data for. The available periods are determined by period type of the dataset. You can also jump a year back or forward by clicking the tabs: Prev year and Next year respectively.</li>
+<li>By now you should be able to see the data entry form.</li>
+</ol>
+</div></blockquote>
+<div class="figure">
+<img alt="_images/access.png" src="_images/access.png" />
+</div>
+</div>
+<div class="section" id="entering-data-for-satellite-sites">
+<h3>Entering data for satellite sites<a class="headerlink" href="#entering-data-for-satellite-sites" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Having selected the correct orgunit,dataset and period, Start entering data by clicking inside the first field and type in the value.</li>
+</ol>
+<blockquote>
+<div><p>Move to the next field by clicking the tab button. You can also move back by clicking shift+tab.</p>
+<p>A green field will indicate that the values are saved in the system.</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>If you type in an invalid value, you will get a pop-up that explains the problem and the field will be coloured yellow (not saved) until you have corrected the value.</li>
+<li>If you have defined a min/max range for the field (data element+organisation unit combination) a pop-up message will notify you when the value is out of range, and the value will remain unsaved until you have changed the value.</li>
+<li>If a field is disabled (grey in color) it means that the field should not be filled. The cursor will automatically jump to the next open field.</li>
+<li>You can view the data history window by doubleclicking on any input field. This shows you the last 12 values entered for the input field in a bar chart.</li>
+</ol>
+<p>This window also shows the min and max range and allows for adjusting the range for the specific organisation unit and data element combination.</p>
+<div class="figure">
+<img alt="_images/doubleclick.png" src="_images/doubleclick.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="collection-of-aggregated-data-for-the-satellite-sites">
+<h3>Collection of aggregated data for the satellite sites<a class="headerlink" href="#collection-of-aggregated-data-for-the-satellite-sites" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>In the app (Supply Pipeline Hierarchy Tool), on the leftside bar, click on the Reports tab. You will see a dropdown appear below the tab.</li>
+<li>Click on the Datasets report, this will direct you to another page where you will have to select;<ul>
+<li>Type of program you want to get the report for.</li>
+<li>The name of the dataset.</li>
+<li>The reporting period for the report. If monthly, select the month for reporting.</li>
+<li>The reporting orgunit.</li>
+</ul>
+</li>
+</ol>
+<ol class="arabic simple" start="3">
+<li>Click on the Get report button at the bottom of the form.</li>
+</ol>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/reports.png" src="_images/reports.png" />
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li>This will get the aggregated data for the satellite sites which are under the central site you selected earlier.</li>
+</ol>
+<div class="figure">
+<img alt="_images/total.png" src="_images/total.png" />
+</div>
+</div>
+<div class="section" id="update-of-central-site-data">
+<h3>Update of central site data<a class="headerlink" href="#update-of-central-site-data" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Once the data has been aggregated in the report, you can update by posting it back to DHIS2.</li>
+<li>This can be done by clicking on the post data button at the top of the form.</li>
+</ol>
+<div class="figure">
+<img alt="_images/post.png" src="_images/post.png" />
+</div>
+</div>
+<div class="section" id="sites-analytics">
+<h3>Sites Analytics<a class="headerlink" href="#sites-analytics" title="Permalink to this headline">¶</a></h3>
+<p>This functionality is basically for displaying the list of facilities by program and by type.</p>
+<ol class="arabic simple">
+<li>Inorder to access this functionality;</li>
+<li>Go to the Reports link on the leftside bar of the application and click on it.</li>
+<li>In the dropdown that appears, select the Sites Analytics option. A new window will be loaded.</li>
+<li>In the form that appears on the page, select the program that you want to get the report on. For example, NASCOP- ART.</li>
+<li>Select the type of report you want to get, for example, list of ordering points, distribution of ordering points by county, list of service points.</li>
+<li>Select the Report Organization Unit to report on.</li>
+<li>click on the get report button at the bottom of the form.</li>
+</ol>
+<div class="figure">
+<img alt="_images/sites.png" src="_images/sites.png" />
+</div>
+<p>This will load for you the report which you want according to the detils you entered in the form.</p>
+<div class="figure">
+<img alt="_images/siter.png" src="_images/siter.png" />
+</div>
+</div>
+<div class="section" id="getting-art-reports">
+<h3>Getting ART Reports<a class="headerlink" href="#getting-art-reports" title="Permalink to this headline">¶</a></h3>
+<p>This functionality is for getting all types of reports that are limited to ART program in DHIS2.</p>
+<p>In order to access this;</p>
+<ol class="arabic simple">
+<li>Go to Reports link on the leftside bar of the application and click on it.</li>
+<li>In the dropdown that appears, select ART Reports.</li>
+<li>A new window will be loaded, fill in the details in the form that appears.</li>
+<li>In the form, Select the type of report that you want to get.</li>
+<li>Select the period for reporting(monthly) and then select the organization unit.</li>
+<li>Then click on the Get report button at the bottom.</li>
+</ol>
+<div class="figure">
+<img alt="_images/art.png" src="_images/art.png" />
+</div>
+<p>This will load for you the report according to the details which you entered in the form.</p>
+<div class="figure">
+<img alt="_images/artr.png" src="_images/artr.png" />
+</div>
+</div>
+</div>
+<div class="section" id="other-procedures">
+<h2>Other procedures<a class="headerlink" href="#other-procedures" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="get-reports">
+<h3>Get reports<a class="headerlink" href="#get-reports" title="Permalink to this headline">¶</a></h3>
+<p>Apart from generating aggregated data for satellite sites (dataset reports),one can also get reports on
+programs and supply chain hierarchy.</p>
+<div class="section" id="generating-a-supply-hierarchy-report">
+<h4>Generating a supply hierarchy report<a class="headerlink" href="#generating-a-supply-hierarchy-report" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li>From the leftside bar of the application, click on the reports link.</li>
+<li>From the dropdown that appears below it, select Supply Hierarchy.</li>
+<li>A window will loaded displaying a program and the various site classifications.</li>
+</ol>
+<div class="figure">
+<img alt="_images/supply.png" src="_images/supply.png" />
+</div>
+</div>
+<div class="section" id="generating-a-program-report">
+<h4>Generating a program report<a class="headerlink" href="#generating-a-program-report" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li>From the leftside bar of the application, click on the reports link.</li>
+<li>From the dropdown that appears below it, select &#8216;Program&#8217;.</li>
+<li>A window will be loaded showing programs and the different types of sites which the progrm is assigned to(sub-county stores, central sites, satellite sites, and stand alone sites).</li>
+</ol>
+<p>You will also be able to see the various datasets that are assigned to a certain program(s).</p>
+<div class="figure">
+<img alt="_images/programme.png" src="_images/programme.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="trouble-shooting">
+<h2>Trouble shooting<a class="headerlink" href="#trouble-shooting" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="restore-of-deleted-data">
+<h3>Restore of deleted data<a class="headerlink" href="#restore-of-deleted-data" title="Permalink to this headline">¶</a></h3>
+<p>One can retore deleted data by:</p>
+<ol class="arabic simple">
+<li>Click on the administration link on the leftside bar of the app.</li>
+<li>A dropdown will appear, click on the first option i.e Supply Hierarchy inorder to delete a supply hierarchy.</li>
+<li>Click on the second option inorder to restore deleted data.</li>
+</ol>
+<p>A window will be loaded showing all the deleted data.</p>
+<ol class="arabic simple">
+<li>If you want to retrieve the data, click on the restore button at the end of the specific row.</li>
+<li>If you want to delete permanently, click on the &#8216;delete permanently&#8217; button at the end of the row.</li>
+</ol>
+<div class="figure">
+<img alt="_images/restore.png" src="_images/restore.png" />
+</div>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Database schema.html" class="btn btn-neutral float-right" title="Database Schema" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Structure.html" class="btn btn-neutral" title="Project structure" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, sci devs.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Overview &mdash; Supply Chain 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Supply Chain 0.1 documentation" href="index.html"/>
+        <link rel="next" title="Software Environment Tools and Components" href="Software.html"/>
+        <link rel="prev" title="DHIS2 supply chain hierarchy project documentation" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Supply Chain
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#facility-types">Facility types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-reporting-hierachy">The reporting hierachy</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Software.html">Software Environment Tools and Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#msql-database">MSQL database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#php-and-apache2-for-the-server-side">PHP and Apache2 for the server side</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#javascript-ajax-jquery-php-curl-for-dhis2-web-api-querying">JavaScript, AJAX, jQuery,PHP CURL for DHIS2 Web API querying</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#html5-bootstrap-font-awesome-javascript-jquery-for-user-interface">HTML5, Bootstrap, Font-Awesome, JavaScript, jQuery for user interface</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Deployment.html">Deployment Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Deployment.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Deployment.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Deployment.html#setup-and-configuration">Setup and Configuration</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Structure.html">Project structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#api">api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#assets">Assets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#client">Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#db">db</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#system">System</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Userguide.html">User guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#getting-started">Getting started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#system-requirements">System requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#logging-in">Logging in</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#permissions">Permissions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#login-roles">Login roles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#launching-the-web-application">Launching the web application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#application-layout">Application layout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#header">Header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#side-bar">Side bar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#users">Users</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#programs">Programs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#classify">Classify</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#updates">Updates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#administration">Administration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#reports">Reports</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#tasks">Tasks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#assigning-a-dataset-to-organization-units">Assigning a dataset to organization units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#accessing-the-data-entry-form">Accessing the data entry form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#entering-data-for-satellite-sites">Entering data for satellite sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#collection-of-aggregated-data-for-the-satellite-sites">Collection of aggregated data for the satellite sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#update-of-central-site-data">Update of central site data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#sites-analytics">Sites Analytics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#getting-art-reports">Getting ART Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#other-procedures">Other procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#get-reports">Get reports</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#generating-a-supply-hierarchy-report">Generating a supply hierarchy report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#generating-a-program-report">Generating a program report</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#trouble-shooting">Trouble shooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#restore-of-deleted-data">Restore of deleted data</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Database schema.html">Database Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Database schema.html#database-tables">Database Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Database schema.html#tables-attributes-and-design">Tables&#8217; Attributes and Design</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#central-sites">central_sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#counties">Counties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#datasets">Datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#deletion-logs">Deletion_logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#dhis-datasets">Dhis_datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#facilities">Facilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#facility-program-mapping">Facility_program_mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#login">Login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#programs">Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#satellite-site">Satellite_site</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#standalone-site">Standalone_site</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#sub-counties">Sub_counties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#sub-county-stores">Sub_county_stores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#top-level">Top_level</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#users">Users</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Supply Chain</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Overview</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Overview.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>The purpose of this project is to establish an hierarchy of the drugs supply chain
+that is not captured in DHIS2 for purposes of analysis and report generation.</p>
+<p>As things stand, the Kenya instance of <a class="reference external" href="http://test.hiskenya.org/dhis-web-commons/security/login.action;jsessionid=720CD1B3E45168E4E27916FA020C6887">DHIS2</a> only establishes a hierarchy based on
+the countries administrative units which while important, does not capture the
+supply chain hierarchy.</p>
+<p>The drug supply hierarchy needs to place facilities in their correct order clearly
+showing the reporting chain ie what facilities report to what and what facilities
+are children so to speak of what facilities.</p>
+<div class="section" id="facility-types">
+<h2>Facility types<a class="headerlink" href="#facility-types" title="Permalink to this headline">¶</a></h2>
+<p>For ART-related medicines, the health facilities are categorized into five (5) types:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Central stores</li>
+<li>Central store dispensing points</li>
+<li>Satellite stores</li>
+<li>Stand alone sites</li>
+<li>Sub-County stores (formerly the district stores)</li>
+</ol>
+</div></blockquote>
+<p>For Nutrition &amp; HIV commodities, the health facilities are categorized into four (4) types:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Central sites</li>
+<li>Central site Dispensing points</li>
+<li>Satellite sites</li>
+<li>Standalone sites</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="the-reporting-hierachy">
+<h2>The reporting hierachy<a class="headerlink" href="#the-reporting-hierachy" title="Permalink to this headline">¶</a></h2>
+<p>The Standalone sites, Sub-county Stores and the Central sites form the <strong>ORDERING POINTS</strong>. These Ordering points are supplied by the national/central level stores, e.g. <a class="reference external" href="http://www.kemsa.co.ke/">KEMSA</a>. An Ordering point is defined as a designated Central site, Standalone site or a Sub-county store that orders ARV and OI commodities from the allocated commodity pipeline, e.g. <a class="reference external" href="http://www.kemsa.co.ke/">KEMSA</a>, <a class="reference external" href="https://www.fbo.gov/index?s=opportunity&amp;mode=form&amp;id=7ff3aa1c240558fcfe5cfc118e1bddbf&amp;tab=core&amp;_cview=1">NHPplus</a>. Usually these are higher level facilities, e.g. hospitals.</p>
+<p>A <strong>Central site</strong> is defined as a facility that provides ART/Nutrition services and also supplies lower level sites (Satellite sites) with ART-related medicines &amp; nutrition commodities.</p>
+<p>As an Ordering point, Central sites own (in the reporting hierarchy) the Central site Dispensing points and the Satellite sites.</p>
+<p>A <strong>Central site Dispensing point</strong> is the Central site itself reporting for its own commodity stock and usage (without that of the Satellite sites), as a service delivery point.</p>
+<p><strong>Satellite sites</strong> are health facilities that report to the Central stores, i.e. that are health facilities providing ART/Nutrition &amp; HIV services, that are supplied with commodities by a Central site or Sub-county store.</p>
+<p>Usually these are lower level health facilities, e.g. health centres, dispensaries.</p>
+<p>A <strong>Sub-county store</strong> is defined as a facility that DOES NOT provide ART/Nutrition &amp; HIV services but supplies lower level sites (Satellite sites) with ART-related medicines and Nutrition &amp; HIV commodities.</p>
+<p>A <strong>Standalone site</strong>, as the name suggests, do not have any affiliation in the reporting hierarchy, i.e. they are facilities that provide ART/Nutrition &amp; HIV services but DO NOT supply any lower level sites (Satellite sites).</p>
+<p>Existing facilities (Level 4) are used as stores for the purpose of drug dispensing.</p>
+<p>These facilities are captures in DHIS2 as Level 4 Organization Units and thus no hierarchy exists between them.</p>
+<p>The purpose of this project is to establish that hierarchy.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li><a class="reference external" href="http://nascop.or.ke/">NASCOP</a> maintains the list of approved Central, Satellite and Standalone sites, and Sub-County stores.</li>
+<li>Each Central site and Sub-county store has a defined list of Satellite sites.</li>
+<li>No Satellite site should report or receive stocks from more than one (1) Central site or Sub-county store.</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Software.html" class="btn btn-neutral float-right" title="Software Environment Tools and Components" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="DHIS2 supply chain hierarchy project documentation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, sci devs.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

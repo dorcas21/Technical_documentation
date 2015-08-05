@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Project structure &mdash; Supply Chain 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Supply Chain 0.1 documentation" href="index.html"/>
+        <link rel="next" title="User guide" href="Userguide.html"/>
+        <link rel="prev" title="Deployment Process" href="Deployment.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Supply Chain
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Overview.html#facility-types">Facility types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Overview.html#the-reporting-hierachy">The reporting hierachy</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Software.html">Software Environment Tools and Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#msql-database">MSQL database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#php-and-apache2-for-the-server-side">PHP and Apache2 for the server side</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#javascript-ajax-jquery-php-curl-for-dhis2-web-api-querying">JavaScript, AJAX, jQuery,PHP CURL for DHIS2 Web API querying</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#html5-bootstrap-font-awesome-javascript-jquery-for-user-interface">HTML5, Bootstrap, Font-Awesome, JavaScript, jQuery for user interface</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Deployment.html">Deployment Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Deployment.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Deployment.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Deployment.html#setup-and-configuration">Setup and Configuration</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Project structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#api">api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assets">Assets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#client">Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#db">db</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system">System</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Userguide.html">User guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#getting-started">Getting started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#system-requirements">System requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#logging-in">Logging in</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#permissions">Permissions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#login-roles">Login roles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#launching-the-web-application">Launching the web application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#application-layout">Application layout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#header">Header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#side-bar">Side bar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#users">Users</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#programs">Programs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#classify">Classify</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#updates">Updates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#administration">Administration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#reports">Reports</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#tasks">Tasks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#assigning-a-dataset-to-organization-units">Assigning a dataset to organization units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#accessing-the-data-entry-form">Accessing the data entry form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#entering-data-for-satellite-sites">Entering data for satellite sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#collection-of-aggregated-data-for-the-satellite-sites">Collection of aggregated data for the satellite sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#update-of-central-site-data">Update of central site data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#sites-analytics">Sites Analytics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#getting-art-reports">Getting ART Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#other-procedures">Other procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#get-reports">Get reports</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#generating-a-supply-hierarchy-report">Generating a supply hierarchy report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#generating-a-program-report">Generating a program report</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#trouble-shooting">Trouble shooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#restore-of-deleted-data">Restore of deleted data</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Database schema.html">Database Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Database schema.html#database-tables">Database Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Database schema.html#tables-attributes-and-design">Tables&#8217; Attributes and Design</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#central-sites">central_sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#counties">Counties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#datasets">Datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#deletion-logs">Deletion_logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#dhis-datasets">Dhis_datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#facilities">Facilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#facility-program-mapping">Facility_program_mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#login">Login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#programs">Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#satellite-site">Satellite_site</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#standalone-site">Standalone_site</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#sub-counties">Sub_counties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#sub-county-stores">Sub_county_stores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#top-level">Top_level</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Database schema.html#users">Users</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Supply Chain</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Project structure</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Structure.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="project-structure">
+<h1>Project structure<a class="headerlink" href="#project-structure" title="Permalink to this headline">¶</a></h1>
+<p>The project contains three parts: api, assets, client, db.</p>
+<p>Each part forms an important part of this project.</p>
+<div class="section" id="api">
+<h2>api<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<p>These are PHP5_CURL scripts that interact with the DHIS2 API.
+Data querying from DHIS2 API and some level of processing is done here.</p>
+</div>
+<div class="section" id="assets">
+<h2>Assets<a class="headerlink" href="#assets" title="Permalink to this headline">¶</a></h2>
+<p>These are the resources needed in this project.</p>
+<p>It contains the JavaScript, CSS, Bootstrap, Font-Awesome scripts.</p>
+</div>
+<div class="section" id="client">
+<h2>Client<a class="headerlink" href="#client" title="Permalink to this headline">¶</a></h2>
+<p>This is the presentation and user interface logic.</p>
+<p>It contains scripts that will display on the browser.</p>
+</div>
+<div class="section" id="db">
+<h2>db<a class="headerlink" href="#db" title="Permalink to this headline">¶</a></h2>
+<p>This is the database logic. It contains scripts for database authentication and connection creation as well as those for inserting, fetching and updating items on the database.</p>
+</div>
+<div class="section" id="system">
+<h2>System<a class="headerlink" href="#system" title="Permalink to this headline">¶</a></h2>
+<p>This is the system environment variables. It contains parameters that need to be set for the system to run once deployed.</p>
+<p>They include the database authentication and connection creation.</p>
+<p>Edit the config (config.php) file to reflect your local environment.</p>
+<p>The projects landing page is index.php which is located at its root. It is the login page.</p>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Userguide.html" class="btn btn-neutral float-right" title="User guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Deployment.html" class="btn btn-neutral" title="Deployment Process" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, sci devs.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

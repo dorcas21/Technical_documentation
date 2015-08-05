@@ -1,0 +1,1328 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Database Schema &mdash; Supply Chain 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Supply Chain 0.1 documentation" href="index.html"/>
+        <link rel="prev" title="User guide" href="Userguide.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Supply Chain
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Overview.html#facility-types">Facility types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Overview.html#the-reporting-hierachy">The reporting hierachy</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Software.html">Software Environment Tools and Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#msql-database">MSQL database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#php-and-apache2-for-the-server-side">PHP and Apache2 for the server side</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#javascript-ajax-jquery-php-curl-for-dhis2-web-api-querying">JavaScript, AJAX, jQuery,PHP CURL for DHIS2 Web API querying</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Software.html#html5-bootstrap-font-awesome-javascript-jquery-for-user-interface">HTML5, Bootstrap, Font-Awesome, JavaScript, jQuery for user interface</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Deployment.html">Deployment Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Deployment.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Deployment.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Deployment.html#setup-and-configuration">Setup and Configuration</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Structure.html">Project structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#api">api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#assets">Assets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#client">Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#db">db</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#system">System</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Userguide.html">User guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#getting-started">Getting started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#system-requirements">System requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#logging-in">Logging in</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#permissions">Permissions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#login-roles">Login roles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#launching-the-web-application">Launching the web application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#application-layout">Application layout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#header">Header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#side-bar">Side bar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#users">Users</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#programs">Programs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#classify">Classify</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#updates">Updates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#administration">Administration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#reports">Reports</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#tasks">Tasks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#assigning-a-dataset-to-organization-units">Assigning a dataset to organization units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#accessing-the-data-entry-form">Accessing the data entry form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#entering-data-for-satellite-sites">Entering data for satellite sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#collection-of-aggregated-data-for-the-satellite-sites">Collection of aggregated data for the satellite sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#update-of-central-site-data">Update of central site data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#sites-analytics">Sites Analytics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#getting-art-reports">Getting ART Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#other-procedures">Other procedures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#get-reports">Get reports</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#generating-a-supply-hierarchy-report">Generating a supply hierarchy report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Userguide.html#generating-a-program-report">Generating a program report</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Userguide.html#trouble-shooting">Trouble shooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Userguide.html#restore-of-deleted-data">Restore of deleted data</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Database Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#database-tables">Database Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tables-attributes-and-design">Tables&#8217; Attributes and Design</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#central-sites">central_sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#counties">Counties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#datasets">Datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deletion-logs">Deletion_logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dhis-datasets">Dhis_datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#facilities">Facilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#facility-program-mapping">Facility_program_mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#login">Login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#programs">Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#satellite-site">Satellite_site</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#standalone-site">Standalone_site</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sub-counties">Sub_counties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sub-county-stores">Sub_county_stores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#top-level">Top_level</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#users">Users</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Supply Chain</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Database Schema</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Database schema.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="database-schema">
+<h1>Database Schema<a class="headerlink" href="#database-schema" title="Permalink to this headline">¶</a></h1>
+<p>This describes the characteristics of the tables and the columns in the Supply Chain Tool; including datatypes and sizes, nullability, index, sequence, key and constraint information.</p>
+<p>Here is a screenshot of how the database schema looks like.</p>
+<div class="figure">
+<img alt="_images/schema.png" src="_images/schema.png" />
+</div>
+<div class="section" id="database-tables">
+<h2>Database Tables<a class="headerlink" href="#database-tables" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Central sites</li>
+<li>Counties</li>
+<li>Datasets</li>
+<li>Deletion_logs</li>
+<li>Dhis_datasets</li>
+<li>Facilities</li>
+<li>Facility_program_mapping</li>
+<li>Login</li>
+<li>Programs</li>
+<li>Satellite_site</li>
+<li>Standalone_site</li>
+<li>Sub_counties</li>
+<li>Sub_county_stores</li>
+<li>Top_level</li>
+<li>Users</li>
+</ol>
+</div>
+<div class="section" id="tables-attributes-and-design">
+<h2>Tables&#8217; Attributes and Design<a class="headerlink" href="#tables-attributes-and-design" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="central-sites">
+<h3>central_sites<a class="headerlink" href="#central-sites" title="Permalink to this headline">¶</a></h3>
+<p>This table consists of a list of central sites.</p>
+<p>The only attribute present in the table is the central id. The other details concerning central sites are captured from DHIS2 through the web API.</p>
+<p>This is how the table looks;</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="26%" />
+<col width="11%" />
+<col width="9%" />
+<col width="17%" />
+<col width="13%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Null</th>
+<th class="head">Key</th>
+<th class="head">Default</th>
+<th class="head">Extra</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>central_id</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="counties">
+<h3>Counties<a class="headerlink" href="#counties" title="Permalink to this headline">¶</a></h3>
+<p>This table consists the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>County_id</li>
+<li>County_name</li>
+<li>Parent_id</li>
+</ul>
+</div></blockquote>
+<p>This is how it looks like</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="26%" />
+<col width="11%" />
+<col width="9%" />
+<col width="17%" />
+<col width="13%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Null</th>
+<th class="head">Key</th>
+<th class="head">Default</th>
+<th class="head">Extra</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>county_id</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>county_name</td>
+<td>varchar(200)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>parent_id</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="datasets">
+<h3>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h3>
+<p>This table stores the datasets used in the application. It contains the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Dataset_id</li>
+<li>Program_id</li>
+<li>Created_on</li>
+<li>Created_by</li>
+<li>Comment</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="23%" />
+<col width="10%" />
+<col width="8%" />
+<col width="15%" />
+<col width="26%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Null</th>
+<th class="head">Key</th>
+<th class="head">Default</th>
+<th class="head">Extra</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>dataset_id</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>program_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>created_on</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>created_by</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>comment</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="deletion-logs">
+<h3>Deletion_logs<a class="headerlink" href="#deletion-logs" title="Permalink to this headline">¶</a></h3>
+<p>This table consists of the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Id</li>
+<li>Number_deleted</li>
+<li>Deleted_item_id</li>
+<li>Deleted_item_name</li>
+<li>Deleted_item_description</li>
+<li>Date_deleted</li>
+<li>Deleted_by</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="19%" />
+<col width="8%" />
+<col width="6%" />
+<col width="12%" />
+<col width="21%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Null</th>
+<th class="head">Key</th>
+<th class="head">Default</th>
+<th class="head">Extra</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>number_deleted</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>deleted_item_id</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>deleted_item_name</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>deleted_item_description</td>
+<td>varchar(5000)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>date_deleted</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>deleted_by</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dhis-datasets">
+<h3>Dhis_datasets<a class="headerlink" href="#dhis-datasets" title="Permalink to this headline">¶</a></h3>
+<p>The attributes in the table are:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Dataset_id</li>
+<li>Dataset_name</li>
+<li>Dataset_href</li>
+<li>Dataset_code</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="11%" />
+<col width="9%" />
+<col width="16%" />
+<col width="13%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Null</th>
+<th class="head">Key</th>
+<th class="head">Default</th>
+<th class="head">Extra</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>dataset_id</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>dataset_name</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>dataset_href</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>dataset_code</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="facilities">
+<h3>Facilities<a class="headerlink" href="#facilities" title="Permalink to this headline">¶</a></h3>
+<p>The table consists of the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Facility_id</li>
+<li>Facility_name</li>
+<li>Parent_id</li>
+<li>Mfl_code</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="25%" />
+<col width="11%" />
+<col width="9%" />
+<col width="16%" />
+<col width="13%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Null</th>
+<th class="head">Key</th>
+<th class="head">Default</th>
+<th class="head">Extra</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>facility_id</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>facility_name</td>
+<td>varchar(200)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>parent_id</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>mfl_code</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="facility-program-mapping">
+<h3>Facility_program_mapping<a class="headerlink" href="#facility-program-mapping" title="Permalink to this headline">¶</a></h3>
+<p>The table contains the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Mapping_id</li>
+<li>Facility_id</li>
+<li>Program_id</li>
+<li>Classification</li>
+<li>Created_on</li>
+<li>Created_by</li>
+<li>Comment</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="21%" />
+<col width="9%" />
+<col width="8%" />
+<col width="14%" />
+<col width="24%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Null</th>
+<th class="head">Key</th>
+<th class="head">Default</th>
+<th class="head">Extra</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>mapping_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>facility_id</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>program_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>classification</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>created_on</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>created_by</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>comment</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="login">
+<h3>Login<a class="headerlink" href="#login" title="Permalink to this headline">¶</a></h3>
+<p>The attributes of the table include:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Login_id</li>
+<li>Username</li>
+<li>Password</li>
+<li>Role</li>
+<li>User_id</li>
+<li>Account_created</li>
+<li>Account_created_by</li>
+<li>Details_last_updated</li>
+<li>Details_last_updated_by</li>
+<li>Password_expiry</li>
+<li>Password_status</li>
+<li>Password_last_updated</li>
+<li>Password_last_updated_by</li>
+<li>Account_status</li>
+<li>Account_status_last_updated</li>
+<li>Account_status_updated_by</li>
+<li>Last_login</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="18%" />
+<col width="8%" />
+<col width="6%" />
+<col width="11%" />
+<col width="20%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>login_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>username</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>password</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>role</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>user_id</td>
+<td>varchar(50)</td>
+<td>YES</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>account_created</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>account_created_by</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>details_last_updated</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>details_last_updated_by</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>password_expiry</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>password_status</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>password_last_updated</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>password_last_updated_by</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>account_status</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>account_status_last_updated</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>account_status_updated_by</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>last_login</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="programs">
+<h3>Programs<a class="headerlink" href="#programs" title="Permalink to this headline">¶</a></h3>
+<p>The table contains programs with the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Program_id</li>
+<li>Program_name</li>
+<li>Date_created</li>
+<li>Created_by</li>
+<li>Date_updated</li>
+<li>Updated_by</li>
+<li>Comment</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="22%" />
+<col width="9%" />
+<col width="8%" />
+<col width="14%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Null</th>
+<th class="head">Key</th>
+<th class="head">Default</th>
+<th class="head">Extra</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>program_id</td>
+<td>int(255)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>program_name</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>date_created</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>created_by</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>date_updated</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>updated_by</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>comment</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="satellite-site">
+<h3>Satellite_site<a class="headerlink" href="#satellite-site" title="Permalink to this headline">¶</a></h3>
+<p>This table stores the satellite sites with the following attributes.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Satellite_id</li>
+<li>Central_id</li>
+</ul>
+</div></blockquote>
+<p>The data is obtained from the web API and stored in this table.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="26%" />
+<col width="11%" />
+<col width="9%" />
+<col width="17%" />
+<col width="13%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Null</th>
+<th class="head">Key</th>
+<th class="head">Default</th>
+<th class="head">Extra</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>satelite_id</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>central_id</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="standalone-site">
+<h3>Standalone_site<a class="headerlink" href="#standalone-site" title="Permalink to this headline">¶</a></h3>
+<p>This is how the table looks like:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="25%" />
+<col width="11%" />
+<col width="9%" />
+<col width="16%" />
+<col width="13%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>standalone_id</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="sub-counties">
+<h3>Sub_counties<a class="headerlink" href="#sub-counties" title="Permalink to this headline">¶</a></h3>
+<p>This table contains the sub-counties with the following attributes:</p>
+<ul class="simple">
+<li>Sub_county_id</li>
+<li>Sub_county_name</li>
+<li>Parent_id</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="24%" />
+<col width="10%" />
+<col width="9%" />
+<col width="16%" />
+<col width="12%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Null</th>
+<th class="head">Key</th>
+<th class="head">Default</th>
+<th class="head">Extra</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>sub_county_id</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>sub_county_name</td>
+<td>varchar(200)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>parent_id</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="sub-county-stores">
+<h3>Sub_county_stores<a class="headerlink" href="#sub-county-stores" title="Permalink to this headline">¶</a></h3>
+<p>The sub-county stores table looks like this:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="23%" />
+<col width="10%" />
+<col width="8%" />
+<col width="15%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Null</th>
+<th class="head">Key</th>
+<th class="head">Default</th>
+<th class="head">Extra</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>sub_county_store_id</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="top-level">
+<h3>Top_level<a class="headerlink" href="#top-level" title="Permalink to this headline">¶</a></h3>
+<p>The table has <strong>id</strong> and <strong>name</strong> as its attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="29%" />
+<col width="13%" />
+<col width="10%" />
+<col width="19%" />
+<col width="15%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Null</th>
+<th class="head">Key</th>
+<th class="head">Default</th>
+<th class="head">Extra</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>id</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>varchar(200)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="users">
+<h3>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h3>
+<p>The users table contains:</p>
+<blockquote>
+<div><ul class="simple">
+<li>User_identifier</li>
+<li>Name</li>
+<li>Gender</li>
+<li>Email</li>
+<li>Mobile_no</li>
+<li>Date_created</li>
+<li>Created_by</li>
+<li>Details_last_updated</li>
+<li>Details_updated_by</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="22%" />
+<col width="10%" />
+<col width="8%" />
+<col width="14%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Null</th>
+<th class="head">Key</th>
+<th class="head">Default</th>
+<th class="head">Extra</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>user_identifier</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>gender</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>email</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>mobile_no</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>date_created</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>created_by</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>details_last_updated</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>details_updated_by</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Userguide.html" class="btn btn-neutral" title="User guide" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, sci devs.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
