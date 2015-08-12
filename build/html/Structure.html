@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Project structure &mdash; Supply Chain 0.1 documentation</title>
+  <title>Project structure &mdash; Supply Chain Hierarchy Tool 1.0 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   
 
   
-    <link rel="top" title="Supply Chain 0.1 documentation" href="index.html"/>
-        <link rel="next" title="User guide" href="Userguide.html"/>
+    <link rel="top" title="Supply Chain Hierarchy Tool 1.0 documentation" href="index.html"/>
+        <link rel="next" title="Database Schema" href="Database schema.html"/>
         <link rel="prev" title="Deployment Process" href="Deployment.html"/> 
 
   
@@ -49,7 +49,7 @@
         
 
         
-          <a href="index.html" class="icon icon-home"> Supply Chain
+          <a href="index.html" class="icon icon-home"> Supply Chain Hierarchy Tool
         
 
         
@@ -90,7 +90,13 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Deployment.html">Deployment Process</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Deployment.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Deployment.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Deployment.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Deployment.html#how-to-install-git">How to install Git:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Deployment.html#how-to-install-lamp">How to install LAMP:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Deployment.html#how-to-install-php-curl">How to install PHP-Curl:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Deployment.html#how-to-use-crontab">How to use crontab:</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="Deployment.html#setup-and-configuration">Setup and Configuration</a><ul class="simple">
 </ul>
 </li>
@@ -102,59 +108,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#client">Client</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#db">db</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#system">System</a><ul class="simple">
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Userguide.html">User guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Userguide.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Userguide.html#getting-started">Getting started</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Userguide.html#system-requirements">System requirements</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Userguide.html#logging-in">Logging in</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="Userguide.html#permissions">Permissions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Userguide.html#login-roles">Login roles</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="Userguide.html#launching-the-web-application">Launching the web application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Userguide.html#application-layout">Application layout</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Userguide.html#header">Header</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Userguide.html#side-bar">Side bar</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Userguide.html#users">Users</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Userguide.html#programs">Programs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Userguide.html#classify">Classify</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Userguide.html#updates">Updates</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Userguide.html#administration">Administration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Userguide.html#reports">Reports</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="Userguide.html#tasks">Tasks</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Userguide.html#assigning-a-dataset-to-organization-units">Assigning a dataset to organization units</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Userguide.html#accessing-the-data-entry-form">Accessing the data entry form</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Userguide.html#entering-data-for-satellite-sites">Entering data for satellite sites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Userguide.html#collection-of-aggregated-data-for-the-satellite-sites">Collection of aggregated data for the satellite sites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Userguide.html#update-of-central-site-data">Update of central site data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Userguide.html#sites-analytics">Sites Analytics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Userguide.html#getting-art-reports">Getting ART Reports</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="Userguide.html#other-procedures">Other procedures</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Userguide.html#get-reports">Get reports</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Userguide.html#generating-a-supply-hierarchy-report">Generating a supply hierarchy report</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Userguide.html#generating-a-program-report">Generating a program report</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="Userguide.html#trouble-shooting">Trouble shooting</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Userguide.html#restore-of-deleted-data">Restore of deleted data</a><ul class="simple">
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -198,7 +151,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Supply Chain</a>
+        <a href="index.html">Supply Chain Hierarchy Tool</a>
       </nav>
 
 
@@ -264,7 +217,7 @@ Data querying from DHIS2 API and some level of processing is done here.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Userguide.html" class="btn btn-neutral float-right" title="User guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Database schema.html" class="btn btn-neutral float-right" title="Database Schema" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Deployment.html" class="btn btn-neutral" title="Deployment Process" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -276,7 +229,7 @@ Data querying from DHIS2 API and some level of processing is done here.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, sci devs.
+        &copy; Copyright 2015, UON.
     </p>
   </div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
@@ -297,7 +250,7 @@ Data querying from DHIS2 API and some level of processing is done here.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.1',
+            VERSION:'1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

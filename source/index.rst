@@ -24,7 +24,6 @@ Table of contents
     Software
     Deployment
     Structure
-    Userguide
     Database schema
     
 .. toctree::
